@@ -11,7 +11,6 @@ const App = () => {
       <Container>
         <Outlet />
       </Container>
-
     </main>
     <Footer />
     </>

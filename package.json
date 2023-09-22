@@ -1,10 +1,14 @@
 {
   "name": "mern-e-commerce",
   "version": "1.0.0",
+  "type": "module",
   "description": "mern stack application for my college project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run client\" \"npm run server\""
   },
   "repository": {
     "type": "git",
@@ -15,5 +19,14 @@
   "bugs": {
     "url": "https://github.com/DevGrg1213/Project-II/issues"
   },
-  "homepage": "https://github.com/DevGrg1213/Project-II#readme"
+  "homepage": "https://github.com/DevGrg1213/Project-II#readme",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongoose": "^7.5.2"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.1",
+    "nodemon": "^3.0.1"
+  }
 }
